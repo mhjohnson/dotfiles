@@ -117,6 +117,8 @@ eval "$(rbenv init - zsh)"
 # Load nvm
 source "$HOME/.nvm/nvm.sh"
 
+# setup vim aliases
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 export EDITOR='vim'
 export VISUAL='vim'
 
