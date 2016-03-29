@@ -127,7 +127,9 @@ set hidden
 set foldmethod=syntax
 set nofoldenable
 set wildmenu
-set ttyfast
+set ttyfast " we got a fast terminal here on our desktop, let's use it
+set ttyscroll=3 " making scrolling faster
+set lazyredraw " avoid scrolling problems
 set noeol
 set cursorline
 syntax on
@@ -219,6 +221,7 @@ let g:lightline = {
 
 " Copy/Cat
 set clipboard=unnamedplus
+set clipboard=
 
 " CtrlP Stuff
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
@@ -250,8 +253,9 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:pymode_folding = 0
 let g:pymode_motion = 0
 let g:pymode_lint_cwindow = 0
+let g:pymode_lint_on_write = 1
 let g:pymode_rope = 0
-let g:pymode_rope_completion = 0
+let g:pymode_rope_completion = 1
 
 " Remove any preview windows
 set completeopt-=preview
